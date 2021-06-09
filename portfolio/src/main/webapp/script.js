@@ -28,12 +28,12 @@ function addRandomFact() {
 }
 
 
-//fetches the string from the QuoteServlet.java and displays on the page
-async function showString() {
+//fetches the quote from the QuoteServlet.java and displays on the page
+async function showQuote() {
   const responseFromServer = await fetch('/quote');
   const textFromResponse = await responseFromServer.json();
 
-  const stringContainer = document.getElementById('string-container');
+  const quoteContainer = document.getElementById('quote-container');
   const rand = Math.floor(Math.random() * textFromResponse.length);
-  stringContainer.innerText = textFromResponse[rand].quote + " -" + textFromResponse[rand].author;
+  quoteContainer.innerText = textFromResponse[rand].quote + " -" + textFromResponse[rand].author;
 }

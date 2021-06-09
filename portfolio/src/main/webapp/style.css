@@ -57,6 +57,11 @@ a {
   margin-top: 20px;
 }
 
+#quote-container {
+    font-size: 25px;
+    color: rgb(83, 215, 255);
+}
+
 button {
     background-color: blue;
     border: none;
