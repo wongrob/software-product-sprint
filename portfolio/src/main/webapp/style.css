@@ -39,12 +39,12 @@ a {
     height: auto;
 }
 
-#div1 {
+.div1 {
     float: left;
     width: 50%;
 }
 
-#div2 {
+.div2 {
     float: left;
     width: 50%;
 }
@@ -53,8 +53,10 @@ a {
     display: inline-block;
 }
 
-#greeting-container {
+#fact-container {
   margin-top: 20px;
+  font-size: 25px;
+  color: rgb(255, 58, 58);
 }
 
 #quote-container {
