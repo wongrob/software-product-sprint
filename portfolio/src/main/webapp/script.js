@@ -17,7 +17,7 @@
  */
 function addRandomFact() {
   const facts =
-      ['I am an Eagle Scout','I was a part of a documentary','I love to play video games','I am part of a club Ultimate team','I am a Marvel movie fan','I am a DC Arrowverse fan'];
+      ['I am an Eagle Scout','I was a part of a documentary','I love to play video games','I am part of a club Ultimate team','I am a Marvel movie fan','I am a DC Arrowverse fan','My favorite color is red','I love the outdoors','I am a member of Phi Kappa Phi','I am a member of Eta Kappa Nu, Theta Kappa Chapter','I am a member of Tau Beta Pi, California Rho Chapter'];
 
   // Pick a random fact.
   const fact = facts[Math.floor(Math.random() * facts.length)];
