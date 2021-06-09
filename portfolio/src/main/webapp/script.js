@@ -13,26 +13,27 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Adds a random fact to the page.
  */
-function addRandomGreeting() {
-  const greetings =
+function addRandomFact() {
+  const facts =
       ['I am an Eagle Scout','I was a part of a documentary','I love to play video games','I am part of a club Ultimate team','I am a Marvel movie fan','I am a DC Arrowverse fan'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  // Pick a random fact.
+  const fact = facts[Math.floor(Math.random() * facts.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const factContainer = document.getElementById('fact-container');
+  factContainer.innerText = fact;
 }
 
 
-//fetches the string from the HelloWorldServlet.java and displays on the page
+//fetches the string from the QuoteServlet.java and displays on the page
 async function showString() {
-  const responseFromServer = await fetch('/hello');
-  const textFromResponse = await responseFromServer.text();
+  const responseFromServer = await fetch('/quote');
+  const textFromResponse = await responseFromServer.json();
 
   const stringContainer = document.getElementById('string-container');
-  stringContainer.innerText = textFromResponse;
+  const rand = Math.floor(Math.random() * textFromResponse.length);
+  stringContainer.innerText = textFromResponse[rand].quote + " -" + textFromResponse[rand].author;
 }
