@@ -8,6 +8,7 @@
             <a href="../index.html">About Me</a>
             <a href="../gallery.html">Gallery</a>
             <a href="../projects.html">Projects</a>
+            <a href="../contact.html">Contact Me</a>
         </div>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
@@ -15,17 +16,23 @@
     <body>
         <div id="content">
             <form action="/contact-form" method="POST">
+                <br/><br/>
                 <label for="name-input">Contact Name:</label>
-                <textarea id="name-input" name="name-input" placeholder="John Doe" required></textarea>
+                <br/>
+                <input type="text" id="name-input" name="name-input" placeholder="John Doe" required></input>
                 <br/>
                 <label for="email-input">Email:</label>
-                <textarea id="email-input" name="email-input" placeholder="example@gmail.com" required></textarea>
+                <br/>
+                <input type="text" id="email-input" name="email-input" placeholder="example@gmail.com" required></input>
                 <br/>
                 <label for="number-input">Phone Number:</label>
-                <textarea id="label-input" name="number-input" placeholder="(123)456-7890"></textarea>
+                <br/>
+                <input type="text" id="label-input" name="number-input" placeholder="(123)456-7890"></input>
                 <br/>
                 <label for="inquiry-input" >Inquiry:</label>
-                <textarea id="inquiry-input" name="inquiry-input" placeholder="What would you like to contact me about?" required></textarea>
+                <br/>
+                <input type="text" id="inquiry-input" name="inquiry-input" placeholder="What would you like to contact me about?" required></input>
+                <br/>
                 <br/>
                 <input type="submit" />
             </form> <!-- Contact form -->

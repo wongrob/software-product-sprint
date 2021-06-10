@@ -87,3 +87,31 @@ figcaption {
   padding: 2px;
   text-align: center;
 }
+
+/* Styling for Contact Me Form */
+
+label {
+    font-size: 30px;
+} /* Input box labels */
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 6px solid black;
+    border-radius: 4px;
+} /* Input box styling */
+
+input[type=text]:focus {
+    background-color: lightgray;
+} /* Makes the input box currently selected slightly different */
+
+input[type=submit] {
+    background-color: rgb(19, 0, 185);
+    font-size: 20px;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+} /* Styling for the submit button */
