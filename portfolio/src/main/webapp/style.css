@@ -121,6 +121,18 @@ a {
     cursor: pointer;
 } /* Styling for buttons on about me page */
 
+#profiles a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 14px 16px;
+}
+
+#profiles a img {
+    height: 1em;
+}
+
 
 
 
