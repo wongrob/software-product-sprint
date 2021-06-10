@@ -37,3 +37,8 @@ async function showQuote() {
   const rand = Math.floor(Math.random() * textFromResponse.length);
   quoteContainer.innerText = textFromResponse[rand].quote + " -" + textFromResponse[rand].author;
 }
+
+//outputs confirmation of form submitting
+function confirm() {
+    alert("Your form has been submitted and received. I will get back to you.");
+}
