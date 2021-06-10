@@ -10,28 +10,30 @@
             <a href="../projects.html">Projects</a>
             <a href="../contact.html">Contact Me</a>
         </div>
+        <br/>
+        <br/>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
     </head>
     <body>
         <div id="content">
             <div class="others">
-                <div class="div1"><img src="/images/profile.JPG" id="profile-pic"/></div>
-                <div class="div2">
-                    <p></p>
-                    <button onclick="addRandomFact()">Random Facts About Me</button>
+                <div class="image-div"><img src="/images/profile.JPG" id="profile-pic"/></div>
+                <div class="nonimage-adjacent-div">
+                    <p>Hello, my name is Robert Wong, but I often go by Robbie, and I am currently pursuing a degree in computer engineering at California State University, Fresno. I have interests in software engineering, artificial intelligence, autonomous vehicles, and green energy and always strive to further my knowledge in related subjects.</p>
+                    <br/>
+                    <button onclick="addRandomFact()" class="about-me-button">Random Facts About Me</button>
                     <div id="fact-container"></div>
                 </div>
             </div>
 
             <div class="others">
-                <p>Hello, my name is Robert Wong, but I often go by Robbie, and I am currently pursuing a degree in computer engineering at California State University, Fresno. I have interests in software engineering, artificial intelligence, autonomous vehicles, and green energy and always strive to further my knowledge in related subjects.</p>
 
                 <div class="others">
-                    <div class="div1">
-                        <img src="/images/FS_LCOE.png"/>
+                    <div class="image-div">
+                        <img src="/images/FS_LCOE.png" id="lcoe"/>
                     </div>
-                    <div class="div2">
+                    <div class="nonimage-adjacent-div">
                         <h1>Education</h1>
                         <h2>California State University, Fresno expected graduation: Spring 2022</h2>
                         <p>B.S. in Computer Engineering</p>
@@ -67,13 +69,16 @@
 
 
                 <h1>Profiles</h1>
-                <p>You can view my LinkedIn profile <a href="https://www.linkedin.com/in/robertkwong/">here</a>.</p>
-                <p>You can view my GitHub profile <a href="https://github.com/wongrob">here</a>.</p>
-                <p>You can view my IEEE profile <a href="https://ieeexplore-ieee-org.hmlproxy.lib.csufresno.edu/author/37088337359">here</a>.</p>
+                <p>You can view my LinkedIn profile <a href="https://www.linkedin.com/in/robertkwong/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+                <p>You can view my GitHub profile <a href="https://github.com/wongrob" target="_blank" rel="noopener noreferrer">here</a>.</p>
+                <p>You can view my IEEE profile <a href="https://ieeexplore.ieee.org/author/37088337359" target="_blank" rel="noopener noreferrer">here</a>.</p>
 
-                <button onclick="showQuote();">Random Quote</button>
+                <button onclick="showQuote();" class="about-me-button">Random Quote</button>
                 <p id="quote-container"></p>
             </div>
+        </div>
+        <div id="footer">
+            <h1><a href="https://www.linkedin.com/in/robertkwong/" target="_blank" rel="noopener noreferrer"><img src="/images/LinkedIn.png" class="icon"/> LinkedIn</a> <a href="https://github.com/wongrob" target="_blank" rel="noopener noreferrer"><img src="/images/GitHub-Light.png" class="icon"/> GitHub</a> <a href="https://ieeexplore.ieee.org/author/37088337359" target="_blank" rel="noopener noreferrer"><img src="/images/IEEE-Blue.png" class="icon"/> IEEE</a></h1>
         </div>
     </body>
 </html>

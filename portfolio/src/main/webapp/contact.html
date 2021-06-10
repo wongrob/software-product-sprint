@@ -2,21 +2,22 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Contact Me</title>
-        <h1 class="page_name">Contact Me</h1>
+        <title>Robert Wong's Contact Me</title>
+        <h1 class="page_name">Contact Robert Wong</h1>
         <div class="navbar">
             <a href="../index.html">About Me</a>
             <a href="../gallery.html">Gallery</a>
             <a href="../projects.html">Projects</a>
             <a href="../contact.html">Contact Me</a>
         </div>
+        <br/>
+        <br/>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
     </head>
     <body>
         <div id="content">
             <form action="/contact-form" method="POST">
-                <br/><br/>
                 <label for="name-input">Contact Name:</label>
                 <br/>
                 <input type="text" id="name-input" name="name-input" placeholder="John Doe" required></input>
@@ -34,8 +35,11 @@
                 <input type="text" id="inquiry-input" name="inquiry-input" placeholder="What would you like to contact me about?" required></input>
                 <br/>
                 <br/>
-                <input type="submit" />
+                <input type="submit" onclick="confirm();"/>
             </form> <!-- Contact form -->
+        </div>
+        <div id="footer">
+            <h1><a href="https://www.linkedin.com/in/robertkwong/" target="_blank" rel="noopener noreferrer"><img src="/images/LinkedIn.png" class="icon"/> LinkedIn</a> <a href="https://github.com/wongrob" target="_blank" rel="noopener noreferrer"><img src="/images/GitHub-Light.png" class="icon"/> GitHub</a> <a href="https://ieeexplore.ieee.org/author/37088337359" target="_blank" rel="noopener noreferrer"><img src="/images/IEEE-Blue.png" class="icon"/> IEEE</a></h1>
         </div>
     </body>
 </html>
