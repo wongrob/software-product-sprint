@@ -19,7 +19,13 @@ public class ContactServlet extends HttpServlet {
     String inquiry = request.getParameter("inquiry-input");
 
     // Print the value so you can see it in the server logs.
-    System.out.println(name + " would like you to contact them at " + email + " or " + number + " regarding: " + inquiry);
+    StringBuilder contactRequest = new StringBuilder();
+    contactRequest.append("Contact Request: " + name + " would like you to contact them at " + email);
+    if (!number.isEmpty()) {
+        contactRequest.append(" or " + number); // Include number only if provided
+    }
+    contactRequest.append(" regarding: " + inquiry);
+    System.out.println(contactRequest);
 
     //Redirect user after submitting
     response.sendRedirect("http://rwong-sps-summer21.appspot.com/");
