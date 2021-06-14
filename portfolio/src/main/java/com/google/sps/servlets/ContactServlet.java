@@ -5,11 +5,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+// Datastore for persistent storage
 import com.google.cloud.datastore.Datastore;
 import com.google.cloud.datastore.DatastoreOptions;
 import com.google.cloud.datastore.Entity;
 import com.google.cloud.datastore.FullEntity;
 import com.google.cloud.datastore.KeyFactory;
+
+// Jsoup for cross-site-scripting (XSS)
+import org.jsoup.Jsoup;
+import org.jsoup.safety.Whitelist;
 
 @WebServlet("/contact-form")
 public class ContactServlet extends HttpServlet {
@@ -18,10 +24,10 @@ public class ContactServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
     // Get the values entered in the form.
-    String name = request.getParameter("name-input");
-    String email = request.getParameter("email-input");
-    String number = request.getParameter("number-input");
-    String inquiry = request.getParameter("inquiry-input");
+    String name = Jsoup.clean(request.getParameter("name-input"), Whitelist.none());
+    String email = Jsoup.clean(request.getParameter("email-input"), Whitelist.none());
+    String number = Jsoup.clean(request.getParameter("number-input"), Whitelist.none());
+    String inquiry = Jsoup.clean(request.getParameter("inquiry-input"), Whitelist.none());
 
     if (number.isEmpty()) {
         number = "N/A"; // Provide a value for someone who didn't add a number
