@@ -38,6 +38,46 @@ async function showQuote() {
   quoteContainer.innerText = textFromResponse[rand].quote + " -" + textFromResponse[rand].author;
 }
 
+//retrieves requests
+function showRequests() {
+  fetch('/request-list').then(response => response.json()).then((reqs) => {
+    const requestListElement = document.getElementById('request-list');
+    reqs.forEach((req) => {
+      requestListElement.appendChild(createRequestElement(req));
+    })
+  });
+}
+
+//displays requests
+function createRequestElement(req) {
+  const requestElement = document.createElement('li');
+  requestElement.className = 'request';
+
+  const titleElement = document.createElement('span');
+  titleElement.innerText = req.name + ": " + req.inquiry;
+
+  const deleteButtonElement = document.createElement('button');
+  deleteButtonElement.className = 'del-button'
+  deleteButtonElement.innerText = 'X';
+  deleteButtonElement.addEventListener('click', () => {
+    deleteRequest(req);
+
+    // Remove the request
+    requestElement.remove();
+  });
+
+  requestElement.appendChild(titleElement);
+  requestElement.appendChild(deleteButtonElement);
+  return requestElement;
+}
+
+//delete request
+function deleteRequest(req) {
+  const params = new URLSearchParams();
+  params.append('id', req.id);
+  fetch('/delete-request', {method: 'POST', body: params});
+}
+
 //outputs confirmation of form submitting
 function confirm() {
     alert("Your form has been submitted and received. I will get back to you.");

@@ -183,3 +183,32 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
 } /* Styling for the submit button */
+
+#request-button {
+    background-color: rgb(19, 0, 185);
+    font-size: 20px;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#request-list {
+    list-style-type: none;
+}
+
+.request {
+    border: thick solid black;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    width: 600px;
+}
+
+.request span {
+    flex-grow: 1;
+}
+
+.del-button {
+    background-color: Transparent;
+}

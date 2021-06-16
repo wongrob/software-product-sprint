@@ -44,7 +44,7 @@ public class ContactServlet extends HttpServlet {
             .set("name", name)
             .set("email", email)
             .set("phone_number", number)
-            .set("request", inquiry)
+            .set("inquiry", inquiry)
             .set("timestamp", timestamp)
             .build();
     datastore.put(contactRequestEntity);
