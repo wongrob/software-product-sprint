@@ -1,10 +1,12 @@
+/* Styling across all pages */
+
 body {
     background-color: rgb(70, 70, 70);
     color: white;
 }
 
 a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -28,43 +30,113 @@ a {
     padding: 14px 16px;
 }
 
+.navbar a:hover {
+    background-color: black;
+    border-radius: 16px;
+} /* Makes the navigation link hovered over slightly different */
+
+.others {
+    display: inline-block;
+} /* General div styling */
+
 #content {
   margin-left: auto;
   margin-right: auto;
   width: 1000px;
 }
 
+
+/* Styling for footer */
+
+#footer {
+    display: block;
+    text-align: center;
+}
+
+#footer a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 14px 16px;
+}
+
+#footer a img {
+    height: 1em;
+}
+
+
+
+/* Styling for about me page */
+
 #profile-pic {
-    width: 30%;
+    width: 80%;
     height: auto;
-}
+    border-radius: 100px;
+    border: 6px solid black;
+} /* Styling for my portrait picture */
 
-#div1 {
+#lcoe {
+    width: 90%;
+    height: auto;
+} /* Styling for Fresno State LCOE logo */
+
+.image-div {
+    float: left;
+    width: 20%;
+} /* Division for images to the left of another div */
+
+.nonimage-adjacent-div {
+    float: left;
+    width: 80%;
+} /* Division for text to the right of images */
+
+.div1 {
     float: left;
     width: 50%;
-}
+} /* Division for left half of text */
 
-#div2 {
+.div2 {
     float: left;
     width: 50%;
-}
+} /* Division for right half of text */
 
-.others {
-    display: inline-block;
-}
+#fact-container {
+    margin-top: 20px;
+    font-size: 25px;
+    color: rgb(255, 58, 58);
+} /* Styling for random fact output */
 
-#greeting-container {
-  margin-top: 20px;
-}
+#quote-container {
+    font-size: 25px;
+    color: rgb(83, 215, 255);
+} /* Styling for random quote output */
 
-button {
+.about-me-button {
     background-color: blue;
-    border: none;
     color: white;
     padding: 8px 16px;
     font-size: 16px;
+    border-radius: 4px;
     cursor: pointer;
+} /* Styling for buttons on about me page */
+
+#profiles a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 14px 16px;
 }
+
+#profiles a img {
+    height: 1em;
+}
+
+
+
+
+/* Styling for gallery page(s) */
 
 .gallery_img {
     width: 40%;
@@ -72,11 +144,71 @@ button {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
+} /* Styling for gallery images */
 
 figcaption {
-  color: rgb(214, 214, 214);
-  font-style: italic;
-  padding: 2px;
-  text-align: center;
+    color: rgb(214, 214, 214);
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+} /* Styling for gallery image figure captions */
+
+
+
+
+/* Styling for Contact Me Form */
+
+label {
+    font-size: 30px;
+} /* Input box labels */
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 6px solid black;
+    border-radius: 4px;
+} /* Input box styling */
+
+input[type=text]:focus {
+    background-color: lightgray;
+} /* Makes the input box currently selected slightly different */
+
+input[type=submit] {
+    background-color: rgb(19, 0, 185);
+    font-size: 20px;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+} /* Styling for the submit button */
+
+#request-button {
+    background-color: rgb(19, 0, 185);
+    font-size: 20px;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#request-list {
+    list-style-type: none;
+}
+
+.request {
+    border: thick solid black;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    width: 600px;
+}
+
+.request span {
+    flex-grow: 1;
+}
+
+.del-button {
+    background-color: Transparent;
 }
